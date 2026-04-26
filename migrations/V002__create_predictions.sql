@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS predictions
+(
+    id SERIAL PRIMARY KEY,
+    model_version VARCHAR(32) NOT NULL,
+    features_payload JSONB NOT NULL,
+    prediction DOUBLE PRECISION NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
